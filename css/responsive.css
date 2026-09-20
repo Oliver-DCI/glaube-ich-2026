@@ -1,0 +1,186 @@
+@media (max-width: 1200px) {
+
+  .hero__quote {
+    display: none;
+  }
+
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .article-list__item {
+    border-bottom:
+      1px solid var(--border);
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition:
+      transform 260ms ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar__close {
+    display: block;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 950;
+
+    background:
+      rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(3px);
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+  }
+
+  .page {
+    margin-left: 0;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .feature-grid,
+  .tools-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-grid .feature-card:last-child,
+  .tools-grid .tool-card:last-child {
+    grid-column: span 2;
+  }
+
+}
+
+@media (max-width: 760px) {
+
+  .header {
+    height: 64px;
+
+    padding: 0 18px;
+  }
+
+  .search {
+    width: min(250px, 58vw);
+  }
+
+  .header__nav a {
+    display: none;
+  }
+
+  .hero {
+    min-height: 570px;
+
+    padding:
+      70px 22px 55px;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 31, 27, 0.9),
+        rgba(8, 31, 27, 0.52)
+      );
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(44px, 12vw, 62px);
+  }
+
+  .hero__subtitle {
+    font-size: 29px;
+  }
+
+  .section {
+    padding:
+      42px 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .feature-grid,
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid .feature-card:last-child,
+  .tools-grid .tool-card:last-child {
+    grid-column: auto;
+  }
+
+  .article-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .article-feature__image {
+    min-height: 250px;
+  }
+
+  .article-list {
+    grid-template-columns: 1fr;
+  }
+
+  .jerusalem-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .search {
+    display: none;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+  .article-feature__content {
+    padding: 27px 23px;
+  }
+
+  .footer nav {
+    flex-wrap: wrap;
+  }
+
+}
